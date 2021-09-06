@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes renders Games screen 1`] = `
+<div>
+  <div>
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`Routes renders Home screen 1`] = `
+<div>
+  <div>
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`Routes renders Profile screen 1`] = `
+<div>
+  <div>
+    Loading...
+  </div>
+</div>
+`;

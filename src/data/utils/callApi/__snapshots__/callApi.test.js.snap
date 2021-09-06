@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`callApi given fetch returns data, when called, returns fetched data 1`] = `
+Object {
+  "callWasSuccessful": true,
+  "data": Object {
+    "data": "Some data",
+  },
+}
+`;
+
+exports[`callApi given fetch returns error, when called, returns error 1`] = `
+Object {
+  "callWasSuccessful": false,
+  "error": "Some error message",
+}
+`;

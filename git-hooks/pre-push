@@ -1,0 +1,25 @@
+#!/bin/sh
+
+export TERM=xterm-256color
+
+clear
+
+printf "Running \033[1mpre-push checks\033[0m...\n\n"
+
+uncommitted_files=$( git status --short | wc -l )
+printf "Checking that there's no uncommitted files..."
+if [ $uncommitted_files -gt 0 ] ; then
+    printf " \033[1;31mnot ok\033[0m!\n\n"
+    exit 1
+fi
+printf " \033[1;32mok\033[0m!\n"
+
+printf "Running unit tests and coverage..."
+if ! npm run test-coverage-for-pre-push-hook>/dev/null 2>/dev/null ; then
+	printf " \033[1;31mnot ok\033[0m!\n\n"
+	exit 1
+fi
+printf " \033[1;32mok\033[0m!\n"
+
+printf "\n"
+printf "\033[1mPre-push checks\033[0m are \033[1;32mok\033[0m!\n\n"

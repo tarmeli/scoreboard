@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders 1`] = `
+<nav>
+  <ul>
+    <li>
+      <a
+        alt="Home page"
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        alt="List of games"
+        href="/games"
+      >
+        Games
+      </a>
+    </li>
+    <li>
+      <a
+        alt="User's profile"
+        href="/profile"
+      >
+        Profile
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

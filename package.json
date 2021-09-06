@@ -1,0 +1,56 @@
+{
+  "name": "game_rankings",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^24.0.0",
+    "husky": "^6.0.0",
+    "jest-enzyme": "^7.1.2",
+    "lodash": "^4.17.20",
+    "prettier": "^2.0.5",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test-coverage-for-pre-push-hook": "npm test -- --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "open-coverage-report-in-browser": "open ./coverage/lcov-report/index.html"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "sh ./git-hooks/pre-push"
+    }
+  },
+  "devDependencies": {
+    "@async-fn/jest": "^1.4.1"
+  }
+}

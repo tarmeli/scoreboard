@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Element can render "A" 1`] = `<a />`;
+
+exports[`Element can render "Div" 1`] = `<div />`;
+
+exports[`Element can render "Li" 1`] = `<li />`;
+
+exports[`Element can render "Nav" 1`] = `<nav />`;
+
+exports[`Element can render "Ol" 1`] = `<ol />`;
+
+exports[`Element can render "Ul" 1`] = `<ul />`;

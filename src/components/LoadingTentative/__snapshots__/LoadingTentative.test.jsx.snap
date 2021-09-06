@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingTentative renders 1`] = `
+<div>
+  Some children
+</div>
+`;
+
+exports[`LoadingTentative when loading, shows loading indicator 1`] = `
+<div>
+  Loading...
+</div>
+`;

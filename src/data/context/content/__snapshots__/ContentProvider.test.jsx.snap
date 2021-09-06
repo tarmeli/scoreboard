@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentProvider renders with fetched data 1`] = `
+<ContentProvider
+  route="/some-route"
+>
+  <ContentConsumer
+    route="/some-route"
+  >
+    <Div>
+      <Element
+        tagName="div"
+      >
+        <div>
+          <LoadingTentative
+            isLoading={true}
+          >
+            <Div>
+              <Element
+                tagName="div"
+              >
+                <div>
+                  Loading...
+                </div>
+              </Element>
+            </Div>
+          </LoadingTentative>
+        </div>
+      </Element>
+    </Div>
+  </ContentConsumer>
+</ContentProvider>
+`;

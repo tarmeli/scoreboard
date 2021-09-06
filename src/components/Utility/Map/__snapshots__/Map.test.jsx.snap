@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map renders 1`] = `
+<Map
+  items={
+    Array [
+      Object {
+        "itemProperty": "some-item-property",
+      },
+      Object {
+        "itemProperty": "some-item-property",
+      },
+    ]
+  }
+>
+  <WrapWithKey
+    key="0"
+  >
+    <div>
+      some-item-property
+    </div>
+  </WrapWithKey>
+  <WrapWithKey
+    key="1"
+  >
+    <div>
+      some-item-property
+    </div>
+  </WrapWithKey>
+</Map>
+`;
