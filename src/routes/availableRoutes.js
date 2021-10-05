@@ -1,20 +1,23 @@
-import Matches from "../screens/matches/Matches";
 import Players from "../screens/players/Players";
+import Home from "../screens/home/Home";
+import { map } from "lodash/fp";
 
-const matches = {
-    name: "Matches",
-    route: "/",
-    screenComponent: Matches,
-    description: "Matches page",
+const routes = {
+    home: {
+        name: "Home",
+        route: "/",
+        screenComponent: Home,
+        description: "Houston table tennis scoreboard",
+    },
+
+    players: {
+        name: "Players",
+        route: "/players",
+        screenComponent: Players,
+        description: "Players page",
+    },
 };
 
-const players = {
-    name: "Players",
-    route: "/players",
-    screenComponent: Players,
-    description: "Players page",
-};
-
-const availableRoutes = [matches, players];
+const availableRoutes = map((route) => ({ ...route }), routes);
 
 export default availableRoutes;

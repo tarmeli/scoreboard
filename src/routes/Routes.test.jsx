@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { shallow } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
 
 import availableRoutes from "./availableRoutes";
@@ -7,9 +7,19 @@ import availableRoutes from "./availableRoutes";
 import Routes from "./Routes";
 
 describe("Routes", () => {
+    it("renders default route", () => {
+        const component = shallow(
+            <MemoryRouter initialEntries={["/"]}>
+                <Routes />
+            </MemoryRouter>
+        );
+
+        expect(component.render()).toMatchSnapshot();
+    });
+
     availableRoutes.forEach(({ name, route }) => {
         it(`renders ${name} screen`, () => {
-            const component = mount(
+            const component = shallow(
                 <MemoryRouter initialEntries={[route]}>
                     <Routes />
                 </MemoryRouter>

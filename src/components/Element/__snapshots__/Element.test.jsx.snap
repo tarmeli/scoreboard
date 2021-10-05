@@ -10,4 +10,16 @@ exports[`Element can render "Nav" 1`] = `<nav />`;
 
 exports[`Element can render "Ol" 1`] = `<ol />`;
 
+exports[`Element can render "Table" 1`] = `<table />`;
+
+exports[`Element can render "Tbody" 1`] = `<tbody />`;
+
+exports[`Element can render "Td" 1`] = `<td />`;
+
+exports[`Element can render "Th" 1`] = `<th />`;
+
+exports[`Element can render "Thead" 1`] = `<thead />`;
+
+exports[`Element can render "Tr" 1`] = `<tr />`;
+
 exports[`Element can render "Ul" 1`] = `<ul />`;

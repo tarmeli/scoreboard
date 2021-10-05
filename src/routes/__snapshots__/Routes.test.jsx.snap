@@ -1,25 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Routes renders Games screen 1`] = `
-<div>
-  <div>
-    Loading...
-  </div>
-</div>
-`;
-
 exports[`Routes renders Home screen 1`] = `
 <div>
+  Hi
+</div>
+`;
+
+exports[`Routes renders Players screen 1`] = `
+<div>
   <div>
-    Loading...
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Player name
+            </th>
+            <th />
+            <th>
+              Wins
+            </th>
+            <th />
+            <th />
+            <th />
+            <th>
+              Losses
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
   </div>
 </div>
 `;
 
-exports[`Routes renders Profile screen 1`] = `
+exports[`Routes renders default route 1`] = `
 <div>
-  <div>
-    Loading...
-  </div>
+  Hi
 </div>
 `;

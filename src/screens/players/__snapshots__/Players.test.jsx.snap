@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Players given an error is provided, when rendered, shows error message 1`] = `
+<div>
+  <div>
+    Some error message
+  </div>
+</div>
+`;
+
+exports[`Players given data is loading, when rendered, shows loading indicator 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`Players given players are loaded, when rendered, shows players and their points 1`] = `
+<div>
+  <div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Player name
+            </th>
+            <th />
+            <th>
+              Wins
+            </th>
+            <th />
+            <th />
+            <th />
+            <th>
+              Losses
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Some player
+            </td>
+            <td>
+              <button>
+                -
+              </button>
+            </td>
+            <td>
+              42
+            </td>
+            <td>
+              <button>
+                +
+              </button>
+            </td>
+            <td />
+            <td>
+              <button>
+                -
+              </button>
+            </td>
+            <td>
+              84
+            </td>
+            <td>
+              <button>
+                +
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Some other player
+            </td>
+            <td>
+              <button>
+                -
+              </button>
+            </td>
+            <td>
+              126
+            </td>
+            <td>
+              <button>
+                +
+              </button>
+            </td>
+            <td />
+            <td>
+              <button>
+                -
+              </button>
+            </td>
+            <td>
+              168
+            </td>
+            <td>
+              <button>
+                +
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Players renders 1`] = `
+<div>
+  <div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Player name
+            </th>
+            <th />
+            <th>
+              Wins
+            </th>
+            <th />
+            <th />
+            <th />
+            <th>
+              Losses
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;

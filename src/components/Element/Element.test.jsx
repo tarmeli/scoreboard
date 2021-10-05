@@ -7,13 +7,32 @@ import Nav from "./Nav/Nav";
 import Ol from "./List/Ol/Ol";
 import Li from "./List/Li/Li";
 import Ul from "./List/Ul/Ul";
+import Table from "./Table/Table";
+import Td from "./Table/Td/Td";
+import Tr from "./Table/Tr/Tr";
+import Th from "./Table/Th/Th";
+import Tbody from "./Table/Tbody/Tbody";
+import Thead from "./Table/Thead/Thead";
 
-const availableElements = [A, Div, Nav, Ol, Li, Ul];
+const availableTags = [
+    A,
+    Div,
+    Nav,
+    Ol,
+    Li,
+    Ul,
+    Table,
+    Td,
+    Tr,
+    Th,
+    Tbody,
+    Thead,
+];
 
 describe("Element", () => {
     let component;
 
-    availableElements.forEach((Tag) => {
+    availableTags.forEach((Tag) => {
         it(`can render "${Tag.name}"`, () => {
             component = shallow(<Tag />);
 

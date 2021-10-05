@@ -6,7 +6,7 @@ Array [
     <ul>
       <li>
         <a
-          alt="Home page"
+          alt="Houston table tennis scoreboard"
           href="/"
         >
           Home
@@ -14,24 +14,16 @@ Array [
       </li>
       <li>
         <a
-          alt="List of games"
-          href="/games"
+          alt="Players page"
+          href="/players"
         >
-          Games
-        </a>
-      </li>
-      <li>
-        <a
-          alt="User's profile"
-          href="/profile"
-        >
-          Profile
+          Players
         </a>
       </li>
     </ul>
   </nav>,
   <div>
-    <div />
+    Hi
   </div>,
 ]
 `;
