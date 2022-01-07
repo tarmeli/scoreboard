@@ -51,6 +51,6 @@
     }
   },
   "devDependencies": {
-    "@async-fn/jest": "^1.4.1"
+    "@async-fn/jest": "^1.5.3"
   }
 }

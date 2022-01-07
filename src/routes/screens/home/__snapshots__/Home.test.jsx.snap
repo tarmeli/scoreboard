@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home renders 1`] = `
-<Home>
+<Home
+  data={
+    Object {
+      "content": "Some content",
+    }
+  }
+>
   <Div>
     <Element
       tagName="div"
     >
       <div>
-        Hi
+        Some content
       </div>
     </Element>
   </Div>

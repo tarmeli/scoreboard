@@ -1,35 +1,29 @@
 import callApi from "./callApi";
 
 describe("callApi", () => {
-    const realFetch = global.fetch;
+  it("given fetch returns data, when called, returns fetched data", async () => {
+    global.fetch = () =>
+      Promise.resolve({
+        json: () => Promise.resolve({ data: "Some data" }),
+      });
 
-    afterEach(() => {
-        global.fetch = realFetch;
+    const actual = await callApi("/some-route").then((response) => {
+      return response;
     });
 
-    it("given fetch returns data, when called, returns fetched data", async () => {
-        global.fetch = () =>
-            Promise.resolve({
-                json: () => Promise.resolve({ data: "Some data" }),
-            });
+    expect(actual).toMatchSnapshot();
+  });
 
-        const actual = await callApi().then((response) => {
-            return response;
-        });
+  it("given fetch returns error, when called, returns error", async () => {
+    global.fetch = () =>
+      Promise.resolve({
+        json: () => Promise.reject("Some error message"),
+      });
 
-        expect(actual).toMatchSnapshot();
+    const actual = await callApi("/some-route").then((response) => {
+      return response;
     });
 
-    it("given fetch returns error, when called, returns error", async () => {
-        global.fetch = () =>
-            Promise.resolve({
-                json: () => Promise.reject("Some error message"),
-            });
-
-        const actual = await callApi().then((response) => {
-            return response;
-        });
-
-        expect(actual).toMatchSnapshot();
-    });
+    expect(actual).toMatchSnapshot();
+  });
 });

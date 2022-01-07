@@ -2,23 +2,6 @@
 
 exports[`Navigation renders 1`] = `
 <nav>
-  <ul>
-    <li>
-      <a
-        alt="Houston table tennis scoreboard"
-        href="/"
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a
-        alt="Players page"
-        href="/players"
-      >
-        Players
-      </a>
-    </li>
-  </ul>
+  <ul />
 </nav>
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import Div from "../Element/Div/Div";
+import { Div } from "../Element/";
 
 const LoadingTentative = ({ isLoading, children }) =>
     isLoading ? <Div>Loading...</Div> : <Div>{children}</Div>;

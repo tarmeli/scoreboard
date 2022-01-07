@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataProvider when api call resolves with some content, renders 1`] = `
+<DataProvider
+  route="some-route"
+>
+  <DataHook>
+    <LoadingTentative
+      isLoading={false}
+    >
+      <Div>
+        <Element
+          tagName="div"
+        >
+          <div>
+            <ErrorTentative
+              isError={false}
+              message=""
+            >
+              <Div>
+                <Element
+                  tagName="div"
+                >
+                  <div>
+                    <Consumer
+                      data={
+                        Object {
+                          "content": "",
+                          "players": Array [],
+                        }
+                      }
+                    >
+                      <Div>
+                        <Element
+                          tagName="div"
+                        >
+                          <div />
+                        </Element>
+                      </Div>
+                    </Consumer>
+                  </div>
+                </Element>
+              </Div>
+            </ErrorTentative>
+          </div>
+        </Element>
+      </Div>
+    </LoadingTentative>
+  </DataHook>
+</DataProvider>
+`;

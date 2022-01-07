@@ -2,7 +2,9 @@
 
 exports[`Routes renders Home screen 1`] = `
 <div>
-  Hi
+  <div>
+    <div />
+  </div>
 </div>
 `;
 
@@ -10,26 +12,40 @@ exports[`Routes renders Players screen 1`] = `
 <div>
   <div>
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              Player name
-            </th>
-            <th />
-            <th>
-              Wins
-            </th>
-            <th />
-            <th />
-            <th />
-            <th>
-              Losses
-            </th>
-          </tr>
-        </thead>
-        <tbody />
-      </table>
+      <div>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Player name
+                </th>
+                <th />
+                <th>
+                  Wins
+                </th>
+                <th />
+                <th />
+                <th />
+                <th>
+                  Losses
+                </th>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+          <div>
+            <input
+              value=""
+            />
+            <button
+              disabled=""
+            >
+              Add Player
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -37,6 +53,8 @@ exports[`Routes renders Players screen 1`] = `
 
 exports[`Routes renders default route 1`] = `
 <div>
-  Hi
+  <div>
+    <div />
+  </div>
 </div>
 `;

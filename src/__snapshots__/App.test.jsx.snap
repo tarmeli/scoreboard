@@ -1,29 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders 1`] = `
-Array [
-  <nav>
-    <ul>
-      <li>
-        <a
-          alt="Houston table tennis scoreboard"
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          alt="Players page"
-          href="/players"
-        >
-          Players
-        </a>
-      </li>
-    </ul>
-  </nav>,
-  <div>
-    Hi
-  </div>,
-]
+<nav>
+  <ul />
+</nav>
 `;

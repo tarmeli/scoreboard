@@ -1,5 +1,5 @@
 import React from "react";
-import Div from "../Element/Div/Div";
+import { Div } from "../Element/";
 
 const ErrorTentative = ({ isError, message, children }) =>
     isError ? <Div>{message}</Div> : <Div>{children}</Div>;

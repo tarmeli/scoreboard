@@ -1,12 +1,20 @@
-import React from "react";
-import { shallow } from "enzyme";
+import React, { useState as useStateMock } from "react";
+import { mount } from "enzyme";
 
 import App from "./App";
 
 describe("App", () => {
-    it("renders", () => {
-        const component = shallow(<App />);
+  let setStateMock;
+  let component;
 
-        expect(component.render()).toMatchSnapshot();
-    });
+  beforeEach(() => {
+    setStateMock = jest.fn();
+    useStateMock.mockImplementation((init) => [init, setStateMock]);
+
+    component = mount(<App />);
+  });
+
+  it("renders", () => {
+    expect(component.render()).toMatchSnapshot();
+  });
 });

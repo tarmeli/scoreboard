@@ -1,21 +1,25 @@
 import React from "react";
-import Map from "../../Utility/Map/Map";
-import availableRoutes from "../../../routes/availableRoutes";
 import NavigationItem from "./NavigationItem";
 import Ul from "../../Element/List/Ul/Ul";
+import Map from "../../utils/Map/Map";
+import RoutesHook from "../../../routes/context/hook/RoutesHook";
 
 const NavigationItemList = () => (
-    <Ul>
-        <Map items={availableRoutes}>
-            {({ name, route, description }) => (
-                <NavigationItem
-                    name={name}
-                    href={route}
-                    description={description}
-                />
-            )}
+  <Ul>
+    <RoutesHook>
+      {({ routes }) => (
+        <Map items={routes}>
+          {({ name, route, description }) => (
+            <NavigationItem
+              name={name}
+              href={route}
+              description={description}
+            />
+          )}
         </Map>
-    </Ul>
+      )}
+    </RoutesHook>
+  </Ul>
 );
 
 export default NavigationItemList;
