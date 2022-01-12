@@ -99,16 +99,17 @@ exports[`Players renders 1`] = `
           </tr>
         </tbody>
       </table>
-      <div>
+      <form>
         <input
           value=""
         />
         <button
           disabled=""
+          type="submit"
         >
           Add Player
         </button>
-      </div>
+      </form>
     </div>
   </div>
 </div>

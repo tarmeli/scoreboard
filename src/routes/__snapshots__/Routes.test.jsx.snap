@@ -34,16 +34,17 @@ exports[`Routes renders Players screen 1`] = `
             </thead>
             <tbody />
           </table>
-          <div>
+          <form>
             <input
               value=""
             />
             <button
               disabled=""
+              type="submit"
             >
               Add Player
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

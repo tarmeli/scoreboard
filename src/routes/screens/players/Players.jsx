@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Div, Input, Table } from "../../../components/Element/";
+import { Button, Div, Form, Input, Table } from "../../../components/Element/";
 import { Tbody, Td, Th, Thead, Tr } from "../../../components/Element/Table/";
 import Map from "../../../components/utils/Map/Map";
 import PlayersProvider from "./context/provider/PlayersProvider";
@@ -88,7 +88,7 @@ const Players = ({ data: { players } }) => {
               </Tbody>
             </Table>
 
-            <Div>
+            <Form onSubmit={() => handleAddNewPlayer()}>
               <Input
                 value={newPlayerNameInputValue}
                 onChange={(event) =>
@@ -97,12 +97,12 @@ const Players = ({ data: { players } }) => {
               />
 
               <Button
-                onClick={() => handleAddNewPlayer()}
+                type="submit"
                 disabled={newPlayerNameInputValue.length === 0}
               >
                 Add Player
               </Button>
-            </Div>
+            </Form>
           </Div>
         )}
       </PlayersHook>
