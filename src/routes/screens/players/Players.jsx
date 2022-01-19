@@ -45,7 +45,9 @@ const Players = ({ data: { players } }) => {
                         <Td>{name}</Td>
 
                         <Td>
-                          <Button onClick={() => handleDecrementWins(id)}>
+                          <Button
+                            onClick={async () => await handleDecrementWins(id)}
+                          >
                             -
                           </Button>
                         </Td>
@@ -53,7 +55,9 @@ const Players = ({ data: { players } }) => {
                         <Td>{wins}</Td>
 
                         <Td>
-                          <Button onClick={() => handleIncrementWins(id)}>
+                          <Button
+                            onClick={async () => await handleIncrementWins(id)}
+                          >
                             +
                           </Button>
                         </Td>
@@ -61,7 +65,11 @@ const Players = ({ data: { players } }) => {
                         <Td />
 
                         <Td>
-                          <Button onClick={() => handleDecrementLosses(id)}>
+                          <Button
+                            onClick={async () =>
+                              await handleDecrementLosses(id)
+                            }
+                          >
                             -
                           </Button>
                         </Td>
@@ -69,7 +77,11 @@ const Players = ({ data: { players } }) => {
                         <Td>{losses}</Td>
 
                         <Td>
-                          <Button onClick={() => handleIncrementLosses(id)}>
+                          <Button
+                            onClick={async () =>
+                              await handleIncrementLosses(id)
+                            }
+                          >
                             +
                           </Button>
                         </Td>
@@ -88,7 +100,7 @@ const Players = ({ data: { players } }) => {
               </Tbody>
             </Table>
 
-            <Form onSubmit={() => handleAddNewPlayer()}>
+            <Form onSubmit={async () => await handleAddNewPlayer()}>
               <Input
                 value={newPlayerNameInputValue}
                 onChange={(event) =>
