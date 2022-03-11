@@ -8,13 +8,12 @@ const DataHook = ({ children: toChild }) => {
     data,
     isLoading,
     error: { isError, message },
-    callApiFor,
   } = useData();
 
   return (
     <LoadingTentative isLoading={isLoading}>
       <ErrorTentative isError={isError} message={message}>
-        {toChild({ data, callApiFor })}
+        {toChild({ data })}
       </ErrorTentative>
     </LoadingTentative>
   );

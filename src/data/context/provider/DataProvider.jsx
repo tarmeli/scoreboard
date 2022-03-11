@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import callApi from "../../utils/callApi/callApi";
-import { dataModel } from "../../model/dataModel";
+import { dataConfiguration } from "../../data-configuration";
 
 const DataContext = createContext({
-  data: dataModel,
+  data: dataConfiguration,
   isLoading: false,
   error: { isError: false, message: "" },
-  callApiFor: () => {},
+  doApiCall: () => {},
 });
 
 export const dependencies = {
@@ -14,14 +14,14 @@ export const dependencies = {
 };
 
 const DataProvider = ({ route, children }) => {
-  const [data, setData] = useState(dataModel);
+  const [data, setData] = useState(dataConfiguration);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState({
     isError: false,
     message: "",
   });
 
-  const callApiFor = async (route, method) => {
+  const doApiCall = async (route, method) => {
     const { callWasSuccessful, data, error } = await dependencies.callApi(
       route,
       method
@@ -39,11 +39,11 @@ const DataProvider = ({ route, children }) => {
 
   useEffect(() => {
     setIsLoading(true);
-    callApiFor(route).then(() => setIsLoading(false));
+    doApiCall(route).then(() => setIsLoading(false));
   }, []);
 
   return (
-    <DataContext.Provider value={{ data, isLoading, error, callApiFor }}>
+    <DataContext.Provider value={{ data, isLoading, error, doApiCall }}>
       {children}
     </DataContext.Provider>
   );

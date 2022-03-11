@@ -13,7 +13,6 @@ describe("Players", () => {
 
     component = mount(
       <Players
-        callApiFor={jest.fn()}
         data={{
           players: [
             {

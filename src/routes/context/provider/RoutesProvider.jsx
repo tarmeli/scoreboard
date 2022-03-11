@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import routesModel from "../../model/routesModel";
+import { availableRoutes } from "../../routes-configuration";
 
 export const RoutesContext = createContext({ routes: [] });
 
 export const dependencies = {
-  routesModel,
+  routesModel: availableRoutes,
 };
 
 const RoutesProvider = ({ children }) => {

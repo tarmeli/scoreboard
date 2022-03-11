@@ -22,13 +22,13 @@ const PlayersProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState({ isError: false, message: "" });
 
-  const { callApiFor } = useData();
+  const { doApiCall } = useData();
 
-  const doApiCall = async (apiCall, method) => {
+  const doPlayerApiCall = async (apiCall, method) => {
     setIsLoading(true);
 
     try {
-      await callApiFor(apiCall, method);
+      await doApiCall(apiCall, method);
     } catch (error) {
       setError({
         isError: true,
@@ -41,29 +41,29 @@ const PlayersProvider = ({ children }) => {
   };
 
   const handleDecrementWins = async (id) => {
-    await doApiCall(`/player/${id}/decrement-wins`, "post");
+    await doPlayerApiCall(`/player/${id}/decrement-wins`, "post");
   };
 
   const handleIncrementWins = async (id) => {
-    await doApiCall(`/player/${id}/increment-wins`, "post");
+    await doPlayerApiCall(`/player/${id}/increment-wins`, "post");
   };
 
   const handleDecrementLosses = async (id) => {
-    await doApiCall(`/player/${id}/decrement-losses`, "post");
+    await doPlayerApiCall(`/player/${id}/decrement-losses`, "post");
   };
 
   const handleIncrementLosses = async (id) => {
-    await doApiCall(`/player/${id}/increment-losses`, "post");
+    await doPlayerApiCall(`/player/${id}/increment-losses`, "post");
   };
 
   const handleAddNewPlayer = async () => {
-    await doApiCall(`/players/add/${newPlayerNameInputValue}`, "post");
+    await doPlayerApiCall(`/players/add/${newPlayerNameInputValue}`, "post");
 
     setNewPlayerNameInputValue("");
   };
 
   const handleRemovePlayer = async (id) => {
-    await doApiCall(`/player/${id}/remove`, "delete");
+    await doPlayerApiCall(`/player/${id}/remove`, "delete");
   };
 
   return (

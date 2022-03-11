@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Routes renders Home screen 1`] = `
-<div>
-  <div>
-    <div />
-  </div>
-</div>
-`;
-
 exports[`Routes renders Players screen 1`] = `
 <div>
   <div>
@@ -55,7 +47,43 @@ exports[`Routes renders Players screen 1`] = `
 exports[`Routes renders default route 1`] = `
 <div>
   <div>
-    <div />
+    <div>
+      <div>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Player name
+                </th>
+                <th />
+                <th>
+                  Wins
+                </th>
+                <th />
+                <th />
+                <th />
+                <th>
+                  Losses
+                </th>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+          <form>
+            <input
+              value=""
+            />
+            <button
+              disabled=""
+              type="submit"
+            >
+              Add Player
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

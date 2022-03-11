@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 import Routes from "./Routes";
 import * as routesProviderModule from "./context/provider/RoutesProvider";
 import { RoutesContext } from "./context/provider/RoutesProvider";
-import routesModel from "./model/routesModel";
+import { availableRoutes } from "./routes-configuration";
 
 describe("Routes", () => {
   let RoutesProviderMock;
@@ -20,7 +20,7 @@ describe("Routes", () => {
         <RoutesContext.Provider
           value={{
             isLoading: false,
-            routes: routesModel,
+            routes: availableRoutes,
           }}
         >
           {children}
@@ -41,7 +41,7 @@ describe("Routes", () => {
     expect(component.render()).toMatchSnapshot();
   });
 
-  routesModel.forEach(({ name, route }) => {
+  availableRoutes.forEach(({ name, route }) => {
     it(`renders ${name} screen`, () => {
       const component = shallow(
         <RoutesProviderMock>
