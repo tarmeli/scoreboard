@@ -39,6 +39,7 @@ const DataProvider = ({ route, children }) => {
 
   useEffect(() => {
     setIsLoading(true);
+
     doApiCall(route).then(() => setIsLoading(false));
   }, []);
 

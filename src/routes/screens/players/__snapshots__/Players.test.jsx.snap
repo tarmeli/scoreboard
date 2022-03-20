@@ -28,7 +28,9 @@ exports[`Players renders 1`] = `
               Some player
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 -
               </button>
             </td>
@@ -36,13 +38,17 @@ exports[`Players renders 1`] = `
               42
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 +
               </button>
             </td>
             <td />
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 -
               </button>
             </td>
@@ -50,12 +56,16 @@ exports[`Players renders 1`] = `
               84
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 +
               </button>
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 Remove Player
               </button>
             </td>
@@ -65,7 +75,9 @@ exports[`Players renders 1`] = `
               Some other player
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 -
               </button>
             </td>
@@ -73,13 +85,17 @@ exports[`Players renders 1`] = `
               126
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 +
               </button>
             </td>
             <td />
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 -
               </button>
             </td>
@@ -87,12 +103,16 @@ exports[`Players renders 1`] = `
               168
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 +
               </button>
             </td>
             <td>
-              <button>
+              <button
+                class="button"
+              >
                 Remove Player
               </button>
             </td>
@@ -104,6 +124,7 @@ exports[`Players renders 1`] = `
           value=""
         />
         <button
+          class="button"
           disabled=""
           type="submit"
         >

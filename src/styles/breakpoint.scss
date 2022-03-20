@@ -1,0 +1,14 @@
+@mixin breakpoint($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin hover-supported {
+
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}

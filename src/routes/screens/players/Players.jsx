@@ -1,15 +1,18 @@
 import React from "react";
 import { Button, Div, Form, Input, Table } from "../../../components/Element/";
-import { Tbody, Td, Th, Thead, Tr } from "../../../components/Element/Table/";
+import { Tbody, Td, Tr } from "../../../components/Element/Table/";
 import Map from "../../../components/utils/Map/Map";
 import PlayersProvider from "./context/provider/PlayersProvider";
 import PlayersHook from "./context/hook/PlayersHook";
+import PlayersTableHeader from "./PlayersTableHeader/PlayersTableHeader";
+import LoadingTentative from "../../../components/LoadingTentative/LoadingTentative";
 
 const Players = ({ data: { players } }) => {
   return (
     <PlayersProvider>
       <PlayersHook>
         {({
+          isLoading,
           handleDecrementWins,
           handleIncrementWins,
           handleDecrementLosses,
@@ -17,25 +20,12 @@ const Players = ({ data: { players } }) => {
           handleAddNewPlayer,
           handleRemovePlayer,
           newPlayerNameInputValue,
-          setNewPlayerNameInputValue,
+          handleNewPlayerNameChange,
+          submitNewPlayerButtonIsDisabled,
         }) => (
-          <Div>
-            <Table>
-              <Thead>
-                <Tr>
-                  <Th>Player name</Th>
-
-                  <Th />
-
-                  <Th>Wins</Th>
-
-                  <Th />
-                  <Th />
-                  <Th />
-
-                  <Th>Losses</Th>
-                </Tr>
-              </Thead>
+          <Div flexContainer flexColumn>
+            <Table flexItem>
+              <PlayersTableHeader />
 
               <Tbody>
                 <Map items={players}>
@@ -88,9 +78,12 @@ const Players = ({ data: { players } }) => {
 
                         <Td>
                           <Button
+                            fullWidth
                             onClick={async () => await handleRemovePlayer(id)}
                           >
-                            Remove Player
+                            <LoadingTentative isLoading={isLoading}>
+                              Remove Player
+                            </LoadingTentative>
                           </Button>
                         </Td>
                       </Tr>
@@ -100,20 +93,30 @@ const Players = ({ data: { players } }) => {
               </Tbody>
             </Table>
 
-            <Form onSubmit={async () => await handleAddNewPlayer()}>
-              <Input
-                value={newPlayerNameInputValue}
-                onChange={(event) =>
-                  setNewPlayerNameInputValue(event.target.value)
-                }
-              />
+            <Form
+              flexItem
+              fullWidth
+              onSubmit={async () => await handleAddNewPlayer()}
+            >
+              <Div flexContainer>
+                <Input
+                  flexItem
+                  fullWidth
+                  value={newPlayerNameInputValue}
+                  onChange={handleNewPlayerNameChange}
+                />
 
-              <Button
-                type="submit"
-                disabled={newPlayerNameInputValue.length === 0}
-              >
-                Add Player
-              </Button>
+                <Button
+                  flexItem
+                  fullWidth
+                  type="submit"
+                  disabled={submitNewPlayerButtonIsDisabled || isLoading}
+                >
+                  <LoadingTentative isLoading={isLoading}>
+                    Add Player
+                  </LoadingTentative>
+                </Button>
+              </Div>
             </Form>
           </Div>
         )}

@@ -1,6 +1,5 @@
 import React from "react";
 import { usePlayers } from "../provider/PlayersProvider";
-import LoadingTentative from "../../../../../components/LoadingTentative/LoadingTentative";
 import ErrorTentative from "../../../../../components/ErrorTentative/ErrorTentative";
 
 const PlayersHook = ({ children: toChild }) => {
@@ -15,25 +14,26 @@ const PlayersHook = ({ children: toChild }) => {
     handleAddNewPlayer,
     handleRemovePlayer,
     newPlayerNameInputValue,
-    setNewPlayerNameInputValue,
+    handleNewPlayerNameChange,
+    submitNewPlayerButtonIsDisabled,
   } = usePlayers();
 
   return (
-    <LoadingTentative isLoading={isLoading}>
-      <ErrorTentative isError={isError} message={message}>
-        {toChild({
-          data,
-          handleDecrementWins,
-          handleIncrementWins,
-          handleDecrementLosses,
-          handleIncrementLosses,
-          handleAddNewPlayer,
-          handleRemovePlayer,
-          newPlayerNameInputValue,
-          setNewPlayerNameInputValue,
-        })}
-      </ErrorTentative>
-    </LoadingTentative>
+    <ErrorTentative isError={isError} message={message}>
+      {toChild({
+        data,
+        isLoading,
+        handleDecrementWins,
+        handleIncrementWins,
+        handleDecrementLosses,
+        handleIncrementLosses,
+        handleAddNewPlayer,
+        handleRemovePlayer,
+        newPlayerNameInputValue,
+        handleNewPlayerNameChange,
+        submitNewPlayerButtonIsDisabled,
+      })}
+    </ErrorTentative>
   );
 };
 

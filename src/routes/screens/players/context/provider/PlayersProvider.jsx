@@ -15,10 +15,15 @@ const PlayersContext = createContext({
   },
   newPlayerNameInputValue: "",
   setNewPlayerNameInputValue: () => {},
+  submitNewPlayerButtonIsDisabled: true,
 });
 
 const PlayersProvider = ({ children }) => {
   const [newPlayerNameInputValue, setNewPlayerNameInputValue] = useState("");
+  const [
+    submitNewPlayerButtonIsDisabled,
+    setSubmitNewPlayerButtonIsDisabled,
+  ] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState({ isError: false, message: "" });
 
@@ -60,6 +65,12 @@ const PlayersProvider = ({ children }) => {
     await doPlayerApiCall(`/players/add/${newPlayerNameInputValue}`, "post");
 
     setNewPlayerNameInputValue("");
+    setSubmitNewPlayerButtonIsDisabled(true);
+  };
+
+  const handleNewPlayerNameChange = (value) => {
+    setNewPlayerNameInputValue(value);
+    setSubmitNewPlayerButtonIsDisabled(false);
   };
 
   const handleRemovePlayer = async (id) => {
@@ -78,7 +89,8 @@ const PlayersProvider = ({ children }) => {
         isLoading,
         error,
         newPlayerNameInputValue,
-        setNewPlayerNameInputValue,
+        handleNewPlayerNameChange,
+        submitNewPlayerButtonIsDisabled,
       }}
     >
       {children}

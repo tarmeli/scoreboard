@@ -31,6 +31,7 @@ exports[`Routes renders Players screen 1`] = `
               value=""
             />
             <button
+              class="button"
               disabled=""
               type="submit"
             >
@@ -75,6 +76,7 @@ exports[`Routes renders default route 1`] = `
               value=""
             />
             <button
+              class="button"
               disabled=""
               type="submit"
             >
