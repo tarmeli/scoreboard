@@ -4,14 +4,25 @@ const callApi = async (route, method) => {
       method,
     });
 
-    const data = await response.json();
+    const {
+      data,
+      error: { isError, message },
+    } = await response.json();
+
+    if (isError) {
+      return { callWasSuccessful: false, error: { isError, message } };
+    }
 
     return {
       callWasSuccessful: true,
       data,
+      error: {
+        isError: false,
+        message: "",
+      },
     };
   } catch (error) {
-    return { callWasSuccessful: false, error };
+    return { callWasSuccessful: false, error: { isError: true, error } };
   }
 };
 

@@ -4,41 +4,52 @@ exports[`Routes renders Players screen 1`] = `
 <div>
   <div>
     <div>
-      <div>
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  Player name
-                </th>
-                <th />
-                <th>
-                  Wins
-                </th>
-                <th />
-                <th />
-                <th />
-                <th>
-                  Losses
-                </th>
-              </tr>
-            </thead>
-            <tbody />
-          </table>
-          <form>
+      <div
+        class="flexColumn flexContainer"
+      >
+        <table
+          class="flexItem"
+        >
+          <thead>
+            <tr>
+              <th>
+                Player name
+              </th>
+              <th />
+              <th>
+                Wins
+              </th>
+              <th />
+              <th />
+              <th />
+              <th>
+                Losses
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+        <form
+          class="fullWidth flexItem"
+        >
+          <div
+            class="flexContainer"
+          >
             <input
+              class="fullWidth flexItem"
               value=""
             />
             <button
-              class="button"
+              class="button fullWidth flexItem"
               disabled=""
               type="submit"
             >
-              Add Player
+              <div>
+                Add Player
+              </div>
             </button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -49,41 +60,52 @@ exports[`Routes renders default route 1`] = `
 <div>
   <div>
     <div>
-      <div>
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  Player name
-                </th>
-                <th />
-                <th>
-                  Wins
-                </th>
-                <th />
-                <th />
-                <th />
-                <th>
-                  Losses
-                </th>
-              </tr>
-            </thead>
-            <tbody />
-          </table>
-          <form>
+      <div
+        class="flexColumn flexContainer"
+      >
+        <table
+          class="flexItem"
+        >
+          <thead>
+            <tr>
+              <th>
+                Player name
+              </th>
+              <th />
+              <th>
+                Wins
+              </th>
+              <th />
+              <th />
+              <th />
+              <th>
+                Losses
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+        <form
+          class="fullWidth flexItem"
+        >
+          <div
+            class="flexContainer"
+          >
             <input
+              class="fullWidth flexItem"
               value=""
             />
             <button
-              class="button"
+              class="button fullWidth flexItem"
               disabled=""
               type="submit"
             >
-              Add Player
+              <div>
+                Add Player
+              </div>
             </button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

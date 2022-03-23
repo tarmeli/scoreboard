@@ -2,136 +2,151 @@
 
 exports[`Players renders 1`] = `
 <div>
-  <div>
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              Player name
-            </th>
-            <th />
-            <th>
-              Wins
-            </th>
-            <th />
-            <th />
-            <th />
-            <th>
-              Losses
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Some player
-            </td>
-            <td>
-              <button
-                class="button"
-              >
-                -
-              </button>
-            </td>
-            <td>
-              42
-            </td>
-            <td>
-              <button
-                class="button"
-              >
-                +
-              </button>
-            </td>
-            <td />
-            <td>
-              <button
-                class="button"
-              >
-                -
-              </button>
-            </td>
-            <td>
-              84
-            </td>
-            <td>
-              <button
-                class="button"
-              >
-                +
-              </button>
-            </td>
-            <td>
-              <button
-                class="button"
-              >
+  <div
+    class="flexColumn flexContainer"
+  >
+    <table
+      class="flexItem"
+    >
+      <thead>
+        <tr>
+          <th>
+            Player name
+          </th>
+          <th />
+          <th>
+            Wins
+          </th>
+          <th />
+          <th />
+          <th />
+          <th>
+            Losses
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Some player
+          </td>
+          <td>
+            <button
+              class="button"
+            >
+              -
+            </button>
+          </td>
+          <td>
+            42
+          </td>
+          <td>
+            <button
+              class="button"
+            >
+              +
+            </button>
+          </td>
+          <td />
+          <td>
+            <button
+              class="button"
+            >
+              -
+            </button>
+          </td>
+          <td>
+            84
+          </td>
+          <td>
+            <button
+              class="button"
+            >
+              +
+            </button>
+          </td>
+          <td>
+            <button
+              class="button fullWidth"
+            >
+              <div>
                 Remove Player
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Some other player
-            </td>
-            <td>
-              <button
-                class="button"
-              >
-                -
-              </button>
-            </td>
-            <td>
-              126
-            </td>
-            <td>
-              <button
-                class="button"
-              >
-                +
-              </button>
-            </td>
-            <td />
-            <td>
-              <button
-                class="button"
-              >
-                -
-              </button>
-            </td>
-            <td>
-              168
-            </td>
-            <td>
-              <button
-                class="button"
-              >
-                +
-              </button>
-            </td>
-            <td>
-              <button
-                class="button"
-              >
+              </div>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Some other player
+          </td>
+          <td>
+            <button
+              class="button"
+            >
+              -
+            </button>
+          </td>
+          <td>
+            126
+          </td>
+          <td>
+            <button
+              class="button"
+            >
+              +
+            </button>
+          </td>
+          <td />
+          <td>
+            <button
+              class="button"
+            >
+              -
+            </button>
+          </td>
+          <td>
+            168
+          </td>
+          <td>
+            <button
+              class="button"
+            >
+              +
+            </button>
+          </td>
+          <td>
+            <button
+              class="button fullWidth"
+            >
+              <div>
                 Remove Player
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <form>
+              </div>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <form
+      class="fullWidth flexItem"
+    >
+      <div
+        class="flexContainer"
+      >
         <input
+          class="fullWidth flexItem"
           value=""
         />
         <button
-          class="button"
+          class="button fullWidth flexItem"
           disabled=""
           type="submit"
         >
-          Add Player
+          <div>
+            Add Player
+          </div>
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
 </div>
 `;

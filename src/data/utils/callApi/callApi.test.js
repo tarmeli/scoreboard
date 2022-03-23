@@ -4,7 +4,11 @@ describe("callApi", () => {
   it("given fetch returns data, when called, returns fetched data", async () => {
     global.fetch = () =>
       Promise.resolve({
-        json: () => Promise.resolve({ data: "Some data" }),
+        json: () =>
+          Promise.resolve({
+            data: "Some data",
+            error: { isError: false, message: "" },
+          }),
       });
 
     const actual = await callApi("/some-route").then((response) => {

@@ -31,6 +31,7 @@ describe("DataProvider", () => {
     await callApiMock.resolve({
       callWasSuccessful: true,
       data: { content: "Some content" },
+      error: { isError: false, message: "" },
     });
 
     expect(component).toMatchSnapshot();
@@ -39,6 +40,7 @@ describe("DataProvider", () => {
   it("when api call returns data, sets correct data", async () => {
     await callApiMock.resolve({
       callWasSuccessful: true,
+      error: { isError: false, message: "" },
       data: { content: "Some content" },
     });
 
@@ -50,7 +52,7 @@ describe("DataProvider", () => {
   it("when api call fails, sets correct error", async () => {
     await callApiMock.resolve({
       callWasSuccessful: false,
-      error: "some error",
+      error: { isError: true, message: "some error" },
     });
 
     expect(setStateMock).toHaveBeenCalledWith({

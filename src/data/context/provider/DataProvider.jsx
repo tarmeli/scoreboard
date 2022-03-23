@@ -22,17 +22,18 @@ const DataProvider = ({ route, children }) => {
   });
 
   const doApiCall = async (route, method) => {
-    const { callWasSuccessful, data, error } = await dependencies.callApi(
-      route,
-      method
-    );
+    const {
+      callWasSuccessful,
+      data,
+      error: { isError, message },
+    } = await dependencies.callApi(route, method);
 
     if (callWasSuccessful) {
       setData(data);
     } else {
       setError({
-        isError: true,
-        message: `${route} API call was not successful, because of ${error}`,
+        isError,
+        message: `${route} API call was not successful, because of ${message}`,
       });
     }
   };
